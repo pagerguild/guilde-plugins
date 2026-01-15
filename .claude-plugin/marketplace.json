@@ -10,5 +10,22 @@
     "documentation": "https://github.com/pagerguild/guilde-plugins#readme",
     "license": "MIT"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "conductor-workflows",
+      "source": "./plugins/conductor-workflows",
+      "description": "Slash commands for orchestrating multi-phase implementation workflows using the conductor pattern. Provides track management, phase execution, checkpoints, and progress tracking.",
+      "version": "1.0.0",
+      "keywords": ["workflow", "project-management", "tracks", "phases", "checkpoints", "conductor"],
+      "category": "workflow",
+      "commands": [
+        "./commands/conductor-setup.md",
+        "./commands/conductor-new-track.md",
+        "./commands/conductor-implement.md",
+        "./commands/conductor-checkpoint.md",
+        "./commands/conductor-status.md",
+        "./commands/conductor-sync-docs.md"
+      ]
+    }
+  ]
 }
