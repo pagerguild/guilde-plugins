@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "guilde-plugins",
+  "owner": {
+    "name": "pagerguild",
+    "url": "https://github.com/pagerguild"
+  },
+  "metadata": {
+    "repository": "https://github.com/pagerguild/guilde-plugins",
+    "documentation": "https://github.com/pagerguild/guilde-plugins#readme",
+    "license": "MIT"
+  },
+  "plugins": []
+}
