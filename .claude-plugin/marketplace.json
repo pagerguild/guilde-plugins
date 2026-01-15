@@ -17,6 +17,17 @@
       },
       "source": "./plugins/conductor-workflows",
       "category": "workflow"
+    },
+    {
+      "name": "tdd-automation",
+      "description": "Test-driven development workflow with red/green/refactor phases and coverage monitoring",
+      "version": "1.0.0",
+      "author": {
+        "name": "pagerguild",
+        "email": "team@pagerguild.dev"
+      },
+      "source": "./plugins/tdd-automation",
+      "category": "development"
     }
   ]
 }
