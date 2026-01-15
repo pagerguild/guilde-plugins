@@ -1,31 +1,22 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "guilde-plugins",
+  "description": "Workflow automation, TDD, code review, and development tools for Claude Code",
   "owner": {
     "name": "pagerguild",
-    "url": "https://github.com/pagerguild"
-  },
-  "metadata": {
-    "repository": "https://github.com/pagerguild/guilde-plugins",
-    "documentation": "https://github.com/pagerguild/guilde-plugins#readme",
-    "license": "MIT"
+    "email": "team@pagerguild.dev"
   },
   "plugins": [
     {
       "name": "conductor-workflows",
-      "source": "./plugins/conductor-workflows",
-      "description": "Slash commands for orchestrating multi-phase implementation workflows using the conductor pattern. Provides track management, phase execution, checkpoints, and progress tracking.",
+      "description": "Slash commands for orchestrating multi-phase implementation workflows using the conductor pattern",
       "version": "1.0.0",
-      "keywords": ["workflow", "project-management", "tracks", "phases", "checkpoints", "conductor"],
-      "category": "workflow",
-      "commands": [
-        "./commands/conductor-setup.md",
-        "./commands/conductor-new-track.md",
-        "./commands/conductor-implement.md",
-        "./commands/conductor-checkpoint.md",
-        "./commands/conductor-status.md",
-        "./commands/conductor-sync-docs.md"
-      ]
+      "author": {
+        "name": "pagerguild",
+        "email": "team@pagerguild.dev"
+      },
+      "source": "./plugins/conductor-workflows",
+      "category": "workflow"
     }
   ]
 }
