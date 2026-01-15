@@ -10,24 +10,38 @@ This marketplace provides modular, single-purpose plugins that can be installed 
 
 | Plugin | Description | Components |
 |--------|-------------|------------|
-| *Coming soon* | Plugins being migrated from guilde-lite | |
+| conductor-workflows | Track and phase management for development workflows | 6 commands |
 
 ## Installation
 
 ### Add Marketplace
 
 ```bash
-/plugin marketplace add pagerguild/guilde-plugins
+claude plugin marketplace add github:pagerguild/guilde-plugins
+```
+
+### List Available Plugins
+
+```bash
+claude plugin marketplace list
 ```
 
 ### Install Individual Plugins
 
 ```bash
-# List available plugins
-/plugin list pagerguild/guilde-plugins
-
 # Install a specific plugin
-/plugin install <plugin-name>@pagerguild/guilde-plugins
+claude plugin install conductor-workflows@guilde-plugins
+
+# Enable/disable plugins
+claude plugin enable conductor-workflows@guilde-plugins
+claude plugin disable conductor-workflows@guilde-plugins
+```
+
+### Validate Plugins
+
+```bash
+# Validate a local plugin or marketplace
+claude plugin validate ./plugins/conductor-workflows
 ```
 
 ### Local Development
@@ -38,31 +52,31 @@ For plugin development or testing:
 # Clone the repository
 git clone https://github.com/pagerguild/guilde-plugins.git
 
-# Use plugins locally
-claude --plugin-dir ./guilde-plugins/plugins/<plugin-name>
+# Use plugins locally (session only)
+claude --plugin-dir ./guilde-plugins/plugins/conductor-workflows
 ```
 
 ## Plugin Categories
 
 ### Workflow
 - **conductor-workflows** - Track and phase management for development workflows
-- **tdd-automation** - Test-driven development with red/green/refactor phases
+- **tdd-automation** *(coming soon)* - Test-driven development with red/green/refactor phases
 
 ### Code Quality
-- **multi-agent-review** - Parallel code review with specialized agents
-- **code-review-pipeline** - Multi-stage review workflow
+- **multi-agent-review** *(coming soon)* - Parallel code review with specialized agents
+- **code-review-pipeline** *(coming soon)* - Multi-stage review workflow
 
 ### Development Agents
-- **exploration-agents** - Codebase exploration and analysis
-- **implementation-agents** - Backend, frontend, database development
-- **spec-agents** - Specification building
+- **exploration-agents** *(coming soon)* - Codebase exploration and analysis
+- **implementation-agents** *(coming soon)* - Backend, frontend, database development
+- **spec-agents** *(coming soon)* - Specification building
 
 ### Tools
-- **mise-tools** - Mise-first development environment management
-- **context-preservation** - Session state and error recovery
-- **diagram-generation** - Mermaid and C4 diagrams
-- **release-research** - Changelog and release tracking
-- **docs-sync** - Documentation synchronization
+- **mise-tools** *(coming soon)* - Mise-first development environment management
+- **context-preservation** *(coming soon)* - Session state and error recovery
+- **diagram-generation** *(coming soon)* - Mermaid and C4 diagrams
+- **release-research** *(coming soon)* - Changelog and release tracking
+- **docs-sync** *(coming soon)* - Documentation synchronization
 
 ## Plugin Structure
 
@@ -81,6 +95,20 @@ plugins/<plugin-name>/
         ├── examples/
         └── references/
 ```
+
+## CLI Reference
+
+| Command | Description |
+|---------|-------------|
+| `claude plugin marketplace add <source>` | Add a marketplace |
+| `claude plugin marketplace list` | List configured marketplaces |
+| `claude plugin marketplace remove <name>` | Remove a marketplace |
+| `claude plugin marketplace update [name]` | Update marketplace(s) |
+| `claude plugin install <plugin>` | Install a plugin |
+| `claude plugin uninstall <plugin>` | Uninstall a plugin |
+| `claude plugin enable <plugin>` | Enable a plugin |
+| `claude plugin disable <plugin>` | Disable a plugin |
+| `claude plugin validate <path>` | Validate a plugin manifest |
 
 ## Contributing
 
